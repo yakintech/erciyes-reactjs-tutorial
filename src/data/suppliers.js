@@ -1,4 +1,4 @@
-export let suppliers = [
+export let suppliersData = [
     {
         "id": 4,
         "companyName": "Tokyo Traders",

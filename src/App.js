@@ -9,11 +9,12 @@ import StateSample from "./state/StateSample"
 import StateSample2 from "./state/StateSample2"
 import VirtualDomSample from "./state/VirtualDomSample"
 import StateBug from "./effectReRender/StateBug"
+import StateObjectArraySample from "./state/StateObjectArraySample"
 
 
 function App(){
 
-  return <StateBug/>
+  return <StateObjectArraySample/>
   return <>
 
     <ul style={{display:'flex', justifyContent:'space-evenly'}}>
