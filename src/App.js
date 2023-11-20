@@ -5,11 +5,15 @@ import Suppliers from "./pages/Suppliers"
 import SupplierDetail from "./pages/SupplierDetail"
 import StateIntro from "./state/StateIntro"
 import StateIntro2 from "./state/StateIntro2"
+import StateSample from "./state/StateSample"
+import StateSample2 from "./state/StateSample2"
+import VirtualDomSample from "./state/VirtualDomSample"
+import StateBug from "./effectReRender/StateBug"
 
 
 function App(){
 
-  return <StateIntro2/>
+  return <StateBug/>
   return <>
 
     <ul style={{display:'flex', justifyContent:'space-evenly'}}>
