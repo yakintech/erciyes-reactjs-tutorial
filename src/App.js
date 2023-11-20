@@ -3,9 +3,13 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Suppliers from "./pages/Suppliers"
 import SupplierDetail from "./pages/SupplierDetail"
+import StateIntro from "./state/StateIntro"
+import StateIntro2 from "./state/StateIntro2"
 
 
 function App(){
+
+  return <StateIntro2/>
   return <>
 
     <ul style={{display:'flex', justifyContent:'space-evenly'}}>
