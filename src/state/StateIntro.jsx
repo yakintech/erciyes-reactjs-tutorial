@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 function StateIntro() {
 
+    console.log('Hello');
     const [counter, setcounter] = useState(0)
 
     const increase = () => {
