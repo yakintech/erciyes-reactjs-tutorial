@@ -10,12 +10,16 @@ import Favorites from "./pages/Favorites"
 import { useContext } from "react"
 import { FavoritesContext } from "./context/FavoritesContext"
 import ProductDetail from "./pages/ProductDetail"
+import Intro from "./mui/Intro"
+import GridSample from "./mui/GridSample"
+import DataGridSample from "./mui/DataGridSample"
 
 
 function App(){
 
    const {favorites} = useContext(FavoritesContext)
 
+   return <DataGridSample/>
 
   return <>
 
