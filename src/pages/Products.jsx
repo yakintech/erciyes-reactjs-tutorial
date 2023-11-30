@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FavoritesContext } from '../context/FavoritesContext'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../store/CartSlice'
 
 function Products() {
 
@@ -9,6 +11,7 @@ function Products() {
     //connect to favContext
      const { favorites, setFavorites } = useContext(FavoritesContext)
 
+     let dispatch = useDispatch()
 
     useEffect(() => {
 
@@ -38,6 +41,11 @@ function Products() {
     }
 
 
+    const add = (item) => {
+        dispatch(addToCart(item))
+    }
+
+
     return (<>
         <h1>Products</h1>
         <hr />
@@ -49,6 +57,7 @@ function Products() {
                     <th>Unit Price</th>
                     <th>Units In Stock</th>
                     <th>Add To Fav</th>
+                    <th>Add To Cart</th>
                 </tr>
             </thead>
             <tbody>
@@ -65,6 +74,9 @@ function Products() {
                                     <span>Add To Fav</span>
                             }
                             </button></td>
+                            <td>
+                                <button onClick={() => add(product)}>Add To Cart</button>
+                            </td>
                     </tr>
                 ))}
             </tbody>

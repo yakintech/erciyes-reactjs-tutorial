@@ -13,13 +13,12 @@ import ProductDetail from "./pages/ProductDetail"
 import Intro from "./mui/Intro"
 import GridSample from "./mui/GridSample"
 import DataGridSample from "./mui/DataGridSample"
+import Cart from "./pages/Cart"
 
 
 function App(){
 
    const {favorites} = useContext(FavoritesContext)
-
-   return <DataGridSample/>
 
   return <>
 
@@ -30,6 +29,7 @@ function App(){
       <li><Link to='/customers'>Customers</Link></li>
       <li><Link to='/products'>Products</Link></li>
       <li><Link to='/favorites'> Favorites (<span style={{color:'red'}}>{favorites.length}</span>) </Link></li>
+      <li><Link to='/cart'>Cart</Link></li>
     </ul>
     <Routes>
       <Route path="/" element={<Home></Home>}></Route>
@@ -41,6 +41,8 @@ function App(){
       <Route path="/products" element={<Products/>} ></Route>
       <Route path="/products/:id" element={<ProductDetail/>} ></Route>
       <Route path="/favorites" element={<Favorites/>}></Route>
+      <Route path="/cart" element={<Cart/>}></Route>
+
     </Routes>
 
   <h1>Site Footer</h1>
